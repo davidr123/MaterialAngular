@@ -1,0 +1,27 @@
+<div class="body">
+    <div class="register">
+        <mat-spinner class="spinner" diameter="50"></mat-spinner>
+  
+      <form [formGroup]="form" (ngSubmit)=" registrar()">
+        <img src="./assets/img/usuario.png " width="50%" >
+        <h1>Register</h1>
+        <mat-form-field class="ancho" appearance="fill">
+            <mat-label>userName</mat-label>
+            <input matInput autocomplete="off" formControlName="UserName">
+          </mat-form-field>
+
+        <mat-form-field class="ancho" appearance="fill">
+            <mat-label>Email </mat-label>
+            <input matInput autocomplete="off" formControlName="Email"  >
+        </mat-form-field>
+
+        <mat-form-field  class="ancho" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput autocomplete="off" formControlName="Password" >
+        </mat-form-field>
+        <br>
+        <button type="submit" class="ancho button" mat-raised-button color="primary" [disabled]="form.invalid" >Registar</button>
+      </form>
+    </div>
+  </div>
+  
